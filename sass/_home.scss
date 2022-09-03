@@ -1,0 +1,146 @@
+.home {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0.7) 100%);
+    top: 0;
+    left: 0;
+  }
+  &-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &__section {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+  }
+}
+.top-menu__list {
+  @include flex(center, flex-start);
+  list-style: none;
+  li {
+    margin: 0 5px;
+  }
+  .logo {
+    margin: 0 70px;
+    margin-top: 15px;
+  }
+  a {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 12px;
+    color: $white;
+    text-transform: uppercase;
+    font-weight: bold;
+    display: block;
+    padding: 40px 25px;
+    border-top: 5px solid transparent;
+    &:hover {
+      color: $yellow;
+      border-top: 5px solid $yellow;
+    }
+  }
+}
+.home__container {
+  margin-top: 175px;
+  @include flex(space-between, center);
+}
+.socials {
+  a {
+    display: block;
+    text-decoration: none;
+    transition: 0.3s;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    height: 62px;
+    &:hover {
+      background: $yellow;
+    }
+  }
+}
+.time-work {
+  font-weight: bold;
+  font-size: 12px;
+  color: $white;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+.home__center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h6 {
+    width: 133px;
+    height: 47px;
+    text-align: center;
+    font-size: 18px;
+    color: #fff;
+  }
+
+  h1 {
+    color: $yellow;
+    font-size: 72px;
+    font-family: kurale;
+    width: 752px;
+    height: 110px;
+    text-align: center;
+  }
+  hr {
+    margin-top: 10px;
+    border: 2px solid $yellow;
+    width: 60px;
+    border-radius: 4px;
+  }
+  .home_buttons {
+    display: flex;
+    width: 440px;
+    justify-content: space-between;
+    padding-top: 40px;
+  }
+  .home_buttons a {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-size: 12px;
+    text-decoration: none;
+    color: #fff;
+    width: 200px;
+    height: 60px;
+    border-radius: 5px;
+  }
+  .active {
+    background-color: $yellow;
+    transition: 0.3s;
+    &:hover {
+      background: transparent;
+      border: 1px solid #ffffff80;
+    }
+  }
+  .nactive {
+    border: 1px solid #ffffff80;
+    transition: 0.3s;
+    &:hover {
+      background: $yellow;
+    }
+  }
+  .arrow-down {
+    margin-top: 70px;
+    display: block;
+    text-decoration: none;
+    transition: 0.3s;
+    border-radius: 50%;
+    height: 62px;
+    &:hover {
+      background: $yellow;
+    }
+  }
+}
